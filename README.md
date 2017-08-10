@@ -20,32 +20,9 @@ Details
 
 	Currently chosing a Port number of 9000. The solution could have been directly built on angular and run as a folder on any OS but this would definately not scale. Hence the MEAN Stack ,utilizing, Node & Angular of MEAN Stack. Provision for MongoDB or MySQL is also possible with this solution. 
 
-	Folder Structure
-	AKQA
-	-- app
-	---- app.js
-	---- public
-	------ angular-app
-	-------- css
-	---------- style.css
-	-------- images <!-- all product images to this folder -->
-	-------- js 
-	---------- app.js 
-	---------- controllers.js 
-	---------- products.json 
-	-------- lib
-	---------- angular
-	------------ angular-animate.min.js
-	------------ angular-route.min.js
-	------------ angular.min.js
-	-------- partials
-	---------- list.html 
-	---------- details.html
-	-- node_modules 
-	---- NOTE A*  node_modules/* 
-	-- package.json
-	-- README.md
-	
+![screen shot 2017-08-10 at 6 58 31 pm](https://user-images.githubusercontent.com/4855654/29162904-195cf232-7dfe-11e7-85de-a044fde66491.png)
+
+
 NOTE A:<!-- All node modules would be required for which it is important to run "sudo npm install ". It is better to load modules dynamically on the server than to save it to the git repository. -->
 
 2. Method To Install and Run the application
