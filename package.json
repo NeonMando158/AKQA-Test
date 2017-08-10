@@ -1,7 +1,7 @@
 {
-  "name": "expressjs",
+  "name": "mean-express-e-commerce-app",
   "version": "1.0.0",
-  "description": "Angular App for Code Excercise for AQKA Agency",
+  "description": "Angular App for Code Excercise for AKQA Agency",
   "main": "app/app.js",
   "scripts": {
     "start": "nodemon -e css,ejs,js,json --watch app --ignore products.json"
