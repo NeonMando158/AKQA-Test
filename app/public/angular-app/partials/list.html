@@ -1,0 +1,60 @@
+<section class="row section-w" style="margin: 3em;">
+  <div class="col-sm-12" style="background: lightblue;">
+    <div class="col-sm-9"
+    <h1>Womens Collection</h1> 
+    </div>
+    <div class="col-sm-3">
+    <label class="formgroup">
+      <select ng-model="productOrder">
+        <option value="size">Filter by Size</option>
+      </select>
+    </label>
+    </div>
+  </div>
+  <div class="searchProducts col-sm-12" style="display: none;">
+    <label class="formgroup" style="display: none;">
+      <input type="radio" ng-model="direction" name="direction" checked>
+      ascending
+     </label>
+    <label class="formgroup" style="display: none;">
+      <input type="radio" ng-model="direction" name="direction" value="reverse">
+      descending
+    </label>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+	  <div class="productlist">
+	  <!-- <ul class="productlist" ng-show="query"> -->
+	    <!-- <li ng-animate="'animate'" class="product cf" ng-repeat="item in products | filter: query | orderBy: productOrder:direction"> -->
+	    <div ng-animate="'animate'" class="col-sm-3 border product cf" ng-repeat="item in products | orderBy: productOrder:direction" style="border: 1px solid lightgrey;">
+	      <a href="#/details/{{products.indexOf(item)}}"  id="{{item.size}}">
+		<div class="col-sm-12">
+	        	<img ng-src="images/{{item.productImage}}" alt="Photo of {{item.productName}}" style="width:100%;">
+		</div>
+	        <div class="col-sm-12 ">
+		  <!-- if the item has a additional attribute then show it here in this div -->
+		  <div class="specialAttribute col-sm-12"> 
+			<div ng-if="item.isExclusive == true && item.isSale == false">
+				<button class="btn btn-small btn-success">EXCLUSIVE</button>
+			</div>	
+			<div ng-if="item.isSale == true && item.isExclusive == false">
+				<button class="btn btn-small btn-danger">SALE</button>
+			</div>	
+		  </div>
+		 <div class="col-sm-12">
+		  <!-- product name -->
+		  <div class="col-sm-9">
+	          	<span class="productName">{{item.productName}}</span>
+ 		  </div>
+		  <!-- product price tag -->
+		  <div class="col-sm-3">
+	          	<span class="priceTag">{{item.price}}</span>
+		  </div>
+		 </div>
+	        </div>
+	      </a>
+	    </div>
+	  </div>  
+    </div>
+  </div>	
+</section>

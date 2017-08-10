@@ -1,0 +1,17 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "Angular App for Code Excercise for AQKA Agency",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "nodemon -e css,ejs,js,json --watch app --ignore products.json"
+  },
+  "author": "Vrandesh Bandikatti",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
+    "reload": "^1.0.0",
+    "socket.io": "^1.4.8"
+  }
+}
