@@ -1,14 +1,24 @@
-<section class="productinfo">
-  <div class="product cf" ng-model="products">
-    <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
-    <a href="#/details/{{nextItem}}" class="btn btn-right">&gt;</a>
-    <h1>{{products[whichItem].productName}}</h1>
-    <div class="info">
-      <h3>{{products[whichItem].reknown}}</h3>
-      <img ng-src="images/{{products[whichItem].productImage}}" alt="Photo of {{products[whichItem].productName}}">
-      <div class="size">Size: {{products[whichItem].size}}</div>
-      <div class="price">Price: {{products[whichItem].price}}</div>
+<section class="productinfo container">
+  <div class="product row cf" ng-model="products">
+    <div class="col-sm-12 well">
+	    <a href="#/details/{{prevItem}}" class="btn btn-left col-sm-6">&lt;</a>
+	    <a href="#/details/{{nextItem}}" class="btn btn-right col-sm-6">&gt;</a>
     </div>
-  </div>
-  <a href="index.html">&laquo; Back to search</a>
+    <div class="col-sm-12 productContainer">
+	    <h1>{{products[whichItem].productName}}</h1>
+	    <div class="info">
+	      <h3>{{products[whichItem].reknown}}</h3>
+	      <div class="col-sm-6">
+	      	<img ng-src="images/{{products[whichItem].productImage}}" alt="Photo of {{products[whichItem].productName}}">
+	      </div>
+		<div class="col-sm-6">
+			<div class="well size">Size: {{products[whichItem].size}}</div>
+			<div class="well price">Price: {{products[whichItem].price}}</div>
+		</div>
+	    </div>
+	  </div>
+    </div>
+    <div class="col-sm-12">
+	  <a href="index.html">&laquo; Back to search</a>
+    </div>
 </section>
